@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    const int NUM_STUDENTS = 10;
+    int hoursStudied[NUM_STUDENTS];
+    std::cout << "Enter hours studied by each student:\n";
+    for (int i = 0; i < NUM_STUDENTS; i++) {
+        std::cout << "Student " << (i + 1) << ": ";
+        std::cin >> hoursStudied[i];
+    }
+    std::cout << "\nHours Studied by Each Student:\n
+    for (int i = 0; i < NUM_STUDENTS; i++) {
+        std::cout << "Student " << (i + 1) << ": " << hoursStudied[i] << " hours\n";
+    }
+    int maxHours = hoursStudied[0];
+    int maxStudent = 1;
+    for (int i = 1; i < NUM_STUDENTS; i++) {
+        if (hoursStudied[i] > maxHours) {
+            maxHours = hoursStudied[i];
+            maxStudent = i + 1;
+        }
+    }
+}
